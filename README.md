@@ -11,7 +11,7 @@ Eclipse
 -----------
 1.기능  
 * 회원가입/로그인 기능  
-![image](https://user-images.githubusercontent.com/75213468/118921302-edaed380-b972-11eb-99a5-b64343b8a894.png)  
+>![image](https://user-images.githubusercontent.com/75213468/118921302-edaed380-b972-11eb-99a5-b64343b8a894.png)  
 >회원가입시 html ```<input type="email">```을 이용한 이메일 정규식활용.  
 ![image](https://user-images.githubusercontent.com/75213468/118921575-61e97700-b973-11eb-9cb8-c7b1a0170420.png)  
 >로그인시 ```try/catch```문을 이용한 유효성 검사 및 Id or Pw가 틀릴경우 message에 담아놓은 문구가 표시되도록 함.  
