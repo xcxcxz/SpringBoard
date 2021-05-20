@@ -7,7 +7,7 @@ JAVA 1.8
 Spring 4.1  
 #### IDE  
 Eclipse  
------------
+  
 1.기능  
 * 회원가입/로그인 기능  
 >- 회원가입시 html ```<input type="email">```을 이용한 이메일 정규식활용.  
