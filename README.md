@@ -21,8 +21,9 @@ Eclipse
 
 
 * 게시물 작성(DB저장).  
-![image](https://user-images.githubusercontent.com/75213468/118922906-c1e11d00-b975-11eb-8bad-422cf32e7b73.png)
-- 게시물 작성시 세션에 저장되어있는 Id를 get/set함으로써 DB에 게시물작성자 저장.  
+>- 게시물 작성시 세션에 저장되어있는 Id를 get/set함으로써 DB에 게시물작성자 저장.  
+![image](https://user-images.githubusercontent.com/75213468/118922906-c1e11d00-b975-11eb-8bad-422cf32e7b73.png)  
+
 * 게시물 조회.  
 * 게시물 수정.  
 * 게시물 삭제.  
