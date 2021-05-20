@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.test.board.mapper.BoardMapper">
+
+	<insert id="insertContent" parameterType="BoardVO">
+		INSERT INTO BOARD
+		(BOARD_SEQ
+		,TITLE
+		,CONTENT
+		,ID
+		,REGDATE
+
+		)
+		VALUES
+		(BOARD_SEQ.NEXTVAL
+		,#{title}
+		,#{content}
+		,#{id}
+		,sysdate
+
+		)
+	</insert>
+
+	<select id="selectAll" resultType="BoardVO">
+
+		SELECT
+		BOARD_SEQ boardSeq
+		,TITLE
+		,CONTENT
+		,ID
+		,REGDATE
+		FROM
+		BOARD
+
+	</select>
+
+	<select id="selectOne" resultType="BoardVO" parameterType="String">
+
+		SELECT
+		BOARD_SEQ boardSeq
+		,TITLE
+		,CONTENT
+		,ID
+		,REGDATE
+		FROM
+		BOARD
+		WHERE
+		BOARD_SEQ=#{boardSeq}
+	</select>
+
+</mapper>
