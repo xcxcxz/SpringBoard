@@ -25,6 +25,9 @@ Eclipse
 ![image](https://user-images.githubusercontent.com/75213468/118922906-c1e11d00-b975-11eb-8bad-422cf32e7b73.png)  
 
 * 게시물 조회.  
+>- 게시물 title 클릭시 해당게시물의 seq를 이용하여 DB로부터 해당게시물의 정보를 가져오며, 해당게시물의 상세페이지로 이동  
+![image](https://user-images.githubusercontent.com/75213468/118923252-374ced80-b976-11eb-91b0-031573bee534.png)
+
 * 게시물 수정.  
 * 게시물 삭제.  
 
