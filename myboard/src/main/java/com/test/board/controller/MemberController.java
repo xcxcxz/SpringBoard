@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.test.board.service.BoardService;
 import com.test.board.service.MemberService;
 import com.test.board.vo.MemberVO;
 
@@ -16,6 +17,9 @@ public class MemberController {
 	
 	@Autowired
 	MemberService memberService;
+	
+	@Autowired
+	BoardService boardService;
 	
 	@RequestMapping(value = "/insertMember", method = RequestMethod.POST)
 	public String insertMember(MemberVO member, Model model) {
@@ -28,15 +32,17 @@ public class MemberController {
 		return "login";
 	}
 	
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@RequestMapping(value = "/login")
 	public String login(MemberVO member, Model model, HttpSession session) {
 		MemberVO result = memberService.login(member);
+		
 		
 		if(result==null) {
 			model.addAttribute("message", "Id와 비밀번호를 확인하십시오.");
 			return "login";
 		}else {
 			session.setAttribute("loginId", result.getId());
+			model.addAttribute("list", boardService.selectAll());
 			return "main";
 		}
 	}
@@ -46,7 +52,7 @@ public class MemberController {
 		System.out.println((String)session.getAttribute("loginId"));
 		return "main";
 	}
-	
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(MemberVO member, Model model, HttpSession session) {
 		session.invalidate();
 		return "login";

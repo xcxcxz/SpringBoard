@@ -10,7 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 	<h1>${sessionScope.loginId}님의페이지</h1>
 	
 	<form action="logout" method="get">
