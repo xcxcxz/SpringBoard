@@ -31,5 +31,7 @@ Eclipse
 
 * 게시물 수정.  
 * 게시물 삭제.  
+>- 작성자 id와 로그인 아이디를 ```<c:if>```태그를 이용하여 비교하며, 동일 id일시 게시글 삭제버튼이 나오도록 설정.
+![image](https://user-images.githubusercontent.com/75213468/119148490-7f0f6a00-ba87-11eb-8090-b8ea7f530fd5.png)  
 
 2.테이블설계
