@@ -53,6 +53,22 @@ public class BoardDaoImpl implements BoardDao{
 		}
 		return result;
 	}
+
+	@Override
+	public int deleteContent(String boardSeq) {
+		int result = 0;
+		
+		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
+		try {
+			result = mapper.deleteContent(boardSeq);
+		}catch (Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
+	
+	
 	
 
 }

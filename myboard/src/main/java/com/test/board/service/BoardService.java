@@ -11,5 +11,7 @@ public interface BoardService {
 	public ArrayList<BoardVO> selectAll();
 	
 	public BoardVO selectOne(String boardSeq);
+	
+	public int deleteContent(String boardSeq);
 
 }

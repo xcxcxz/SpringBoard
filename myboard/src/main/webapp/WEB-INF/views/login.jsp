@@ -8,11 +8,11 @@
 </head>
 <body>
 <h1>로그인</h1>
-	
+	<a href = "/board/">회원가입</a>
 	<form action="login" method="post">
-	<font color="red">${message}</font>
 		ID:<input type="text" name="id"><br>
 		PW:<input type="password" name="pw"><br>
+		<font color="red">${message}</font>
 		<input type="submit" value="login">
 	</form>
 

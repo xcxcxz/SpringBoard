@@ -16,6 +16,12 @@
 	작성일 : ${board.regdate}<br>
 	내용 : ${board.content}<br>
 
+	<c:if test="${sessionScope.loginId==board.id}">
+		<form action="deleteContent" method="post">
+			<input type="hidden" name="boardSeq" value="${board.boardSeq}">
+			<button type="submit">삭제</button>
+		</form>
+	</c:if>
 	<br>
 
 	<a href="/board/getBoardlist">목록으로</a>

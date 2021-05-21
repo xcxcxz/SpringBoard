@@ -48,5 +48,10 @@
 		WHERE
 		BOARD_SEQ=#{boardSeq}
 	</select>
+	
+	<delete id="deleteContent" parameterType="String">
+		
+		DELETE FROM BOARD WHERE BOARD_SEQ=#{boardSeq}
+	</delete>
 
 </mapper>

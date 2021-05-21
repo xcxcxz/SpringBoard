@@ -12,5 +12,7 @@ public interface BoardDao {
 	public ArrayList<BoardVO> selectAll();
 	//게시글 상세
 	public BoardVO selectOne(String boardSeq);
+	//게시글 삭제
+	public int deleteContent(String boardSeq);
 
 }

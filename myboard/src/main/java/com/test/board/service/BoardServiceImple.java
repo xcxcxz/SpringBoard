@@ -28,6 +28,13 @@ public class BoardServiceImple implements BoardService{
 	public BoardVO selectOne(String boardSeq) {
 		return boardDao.selectOne(boardSeq);
 	}
+
+	@Override
+	public int deleteContent(String boardSeq) {
+		return boardDao.deleteContent(boardSeq);
+	}
+	
+	
 	
 
 }

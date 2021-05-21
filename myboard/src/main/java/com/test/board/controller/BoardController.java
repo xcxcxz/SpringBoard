@@ -50,4 +50,20 @@ public class BoardController {
 
 		return "content";
 	}
+	
+	@RequestMapping(value = "/deleteContent", method = RequestMethod.POST)
+	public String deleteContent(String boardSeq, HttpSession session) {
+		if(session.getAttribute("loginId") == null) {
+			return "login";
+		}else {
+			String loginId =(String) session.getAttribute("loginId");
+			String id = boardService.selectOne(boardSeq).getId();
+			if(loginId.equals(id)) {
+				boardService.deleteContent(boardSeq);
+			}else {
+				return "redirect:/getBoardlist";
+			}
+		}
+		return "redirect:/getBoardlist";
+	}
 }
