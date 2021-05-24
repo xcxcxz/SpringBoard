@@ -30,9 +30,12 @@ Eclipse
 ![image](https://user-images.githubusercontent.com/75213468/118923252-374ced80-b976-11eb-91b0-031573bee534.png)
 
 * 게시물 수정.  
-* 게시물 삭제.  
->- 작성자 id와 로그인 아이디를 ```<c:if>```태그를 이용하여 비교하며, 동일 id일시 게시글 삭제버튼이 나오도록 설정.
+>- 작성자 id와 로그인 아이디를 ```<c:if>```태그를 이용하여 비교하며, 동일 id일시 게시글 수정버튼이 나오도록 설정 및 수정 가능하도록 설정.
 ![image](https://user-images.githubusercontent.com/75213468/119348158-71502380-bcd7-11eb-9bd5-6af7d21989e7.png)  
+
+* 게시물 삭제.  
+>- 작성자 id와 로그인 아이디를 ```<c:if>```태그를 이용하여 비교하며, 동일 id일시 게시글 삭제버튼이 나오도록 설정 및 삭제 가능하도록 설정.
+
 ![image](https://user-images.githubusercontent.com/75213468/119148490-7f0f6a00-ba87-11eb-8090-b8ea7f530fd5.png) ![image](https://user-images.githubusercontent.com/75213468/119148936-f644fe00-ba87-11eb-8bdc-1c7785b4fad7.png)  
 
 
