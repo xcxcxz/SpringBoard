@@ -1,14 +1,10 @@
 # SpringBoard
 개발환경
 ---------
-### Language 
-JAVA 1.8  
-### Framework  
-Spring 4.1  
-### IDE  
-Eclipse  
-### DB  
-Oracle 11g  
+### Language : JAVA 1.8  
+### Framework : Spring 4.1  
+### IDE : Eclipse  
+### DB : Oracle 11g  
 
 ---------
   
