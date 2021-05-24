@@ -14,5 +14,7 @@ public interface BoardDao {
 	public BoardVO selectOne(String boardSeq);
 	//게시글 삭제
 	public int deleteContent(String boardSeq);
+	//게시글 수정
+	public int updateBoard(BoardVO board);
 
 }

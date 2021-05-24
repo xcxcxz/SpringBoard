@@ -13,5 +13,7 @@ public interface BoardService {
 	public BoardVO selectOne(String boardSeq);
 	
 	public int deleteContent(String boardSeq);
+	
+	public int updateBoard(BoardVO board);
 
 }

@@ -21,6 +21,10 @@
 			<input type="hidden" name="boardSeq" value="${board.boardSeq}">
 			<button type="submit">삭제</button>
 		</form>
+		<form action="updateBoard" method="get">
+	 	<input type="hidden" name="boardSeq" value="${board.boardSeq}">
+	 	<button type="submit">수정</button>
+	</form>
 	</c:if>
 	<br>
 

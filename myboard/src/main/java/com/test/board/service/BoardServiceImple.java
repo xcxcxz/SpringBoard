@@ -33,6 +33,11 @@ public class BoardServiceImple implements BoardService{
 	public int deleteContent(String boardSeq) {
 		return boardDao.deleteContent(boardSeq);
 	}
+
+	@Override
+	public int updateBoard(BoardVO board) {
+		return boardDao.updateBoard(board);
+	}
 	
 	
 	

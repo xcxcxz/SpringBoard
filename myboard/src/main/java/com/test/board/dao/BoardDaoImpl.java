@@ -53,6 +53,19 @@ public class BoardDaoImpl implements BoardDao{
 		}
 		return result;
 	}
+	
+	public int updateBoard(BoardVO board) {
+		int result = 0;
+
+		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
+		try {
+			result = mapper.updateBoard(board);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
 
 	@Override
 	public int deleteContent(String boardSeq) {

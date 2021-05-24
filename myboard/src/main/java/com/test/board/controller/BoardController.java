@@ -50,17 +50,41 @@ public class BoardController {
 
 		return "content";
 	}
-	
+
+	@RequestMapping(value = "/updateBoard", method = RequestMethod.GET)
+	public String goUpdateBoard(String boardSeq, Model model) {
+		model.addAttribute("board", boardService.selectOne(boardSeq));
+
+		return "write";
+	}
+
+	@RequestMapping(value = "/updateBoard", method = RequestMethod.POST)
+	public String boardUpdate(BoardVO board, HttpSession session) {
+
+		if (session.getAttribute("loginId") == null) {
+			return "login";
+		} else {
+			String loginId = (String) session.getAttribute("loginId");
+			String id = boardService.selectOne(board.getBoardSeq()).getId();
+			if (loginId.equals(id)) {	
+				boardService.updateBoard(board);
+			} else {
+				return "redirect:/getBoardlist";
+			}
+		}
+		return "redirect:/getBoardlist";
+	}
+
 	@RequestMapping(value = "/deleteContent", method = RequestMethod.POST)
 	public String deleteContent(String boardSeq, HttpSession session) {
-		if(session.getAttribute("loginId") == null) {
+		if (session.getAttribute("loginId") == null) {
 			return "login";
-		}else {
-			String loginId =(String) session.getAttribute("loginId");
+		} else {
+			String loginId = (String) session.getAttribute("loginId");
 			String id = boardService.selectOne(boardSeq).getId();
-			if(loginId.equals(id)) {
+			if (loginId.equals(id)) {
 				boardService.deleteContent(boardSeq);
-			}else {
+			} else {
 				return "redirect:/getBoardlist";
 			}
 		}

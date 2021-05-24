@@ -49,6 +49,16 @@
 		BOARD_SEQ=#{boardSeq}
 	</select>
 	
+	<update id="updateBoard" parameterType="BoardVO">
+	
+		UPDATE BOARD SET
+			TITLE=#{title}
+			,CONTENT=#{content}
+		WHERE
+			BOARD_SEQ=#{boardSeq}
+	
+	</update>
+	
 	<delete id="deleteContent" parameterType="String">
 		
 		DELETE FROM BOARD WHERE BOARD_SEQ=#{boardSeq}

@@ -21,7 +21,12 @@ public class MemberController {
 	@Autowired
 	BoardService boardService;
 	
-	@RequestMapping(value = "/insertMember", method = RequestMethod.POST)
+	@RequestMapping(value = "/reg", method = RequestMethod.GET)
+	public String insertMember() {
+		return "reg";
+	}
+	
+	@RequestMapping(value = "/reg", method = RequestMethod.POST)
 	public String insertMember(MemberVO member, Model model) {
 		int result = memberService.insertMember(member);
 		
