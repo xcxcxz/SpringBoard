@@ -7,6 +7,8 @@ JAVA 1.8
 Spring 4.1  
 #### IDE  
 Eclipse  
+#### DB  
+Oracle 11g  
 
 ---------
   
