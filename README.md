@@ -13,12 +13,16 @@ Eclipse
 1.기능  
 * 회원가입/로그인 기능  
 >- 회원가입시 html ```<input type="email">```을 이용한 이메일 정규식활용.  
-> ![image](https://user-images.githubusercontent.com/75213468/118921302-edaed380-b972-11eb-99a5-b64343b8a894.png)  
+![image](https://user-images.githubusercontent.com/75213468/118921302-edaed380-b972-11eb-99a5-b64343b8a894.png)  
 >- 로그인시 ```try/catch```문을 이용한 유효성 검사 및 Id or Pw가 틀릴경우 message에 담아놓은 문구가 표시되도록 함.  
 ![image](https://user-images.githubusercontent.com/75213468/118921575-61e97700-b973-11eb-9cb8-c7b1a0170420.png)  
 >- 로그인 성공시 Id를 세션에 add하여 세션이 종료될때 까지 로그인이 유지되도록 설정.   
 ![image](https://user-images.githubusercontent.com/75213468/118922205-94e03a80-b974-11eb-8c0d-a3df8af2bf78.png)  
 
+* 회원탈퇴 기능  
+>- 회원탈퇴시 회원이 작성한 모든 게시물 삭제되도록 구현. 
+![image](https://user-images.githubusercontent.com/75213468/119369238-e8dd7d00-bcee-11eb-88bd-75ef00daa141.png)
+![image](https://user-images.githubusercontent.com/75213468/119369342-04488800-bcef-11eb-89ec-4a6ed5bfdb34.png)
 
 
 * 게시물 작성(DB저장).  
@@ -39,4 +43,11 @@ Eclipse
 ![image](https://user-images.githubusercontent.com/75213468/119148490-7f0f6a00-ba87-11eb-8090-b8ea7f530fd5.png) ![image](https://user-images.githubusercontent.com/75213468/119148936-f644fe00-ba87-11eb-8bdc-1c7785b4fad7.png)  
 
 
-2.테이블설계
+2.테이블설계.  
+>-Member  
+![image](https://user-images.githubusercontent.com/75213468/119369446-25a97400-bcef-11eb-8786-ef3b1d4b4342.png)  
+Board  
+![image](https://user-images.githubusercontent.com/75213468/119369623-5a1d3000-bcef-11eb-8a91-145a554135ee.png)
+
+
+
