@@ -35,7 +35,8 @@
 
 	</select>
 
-	<select id="selectOne" resultType="BoardVO" parameterType="String">
+	<select id="selectOne" resultType="BoardVO"
+		parameterType="String">
 
 		SELECT
 		BOARD_SEQ boardSeq
@@ -48,20 +49,25 @@
 		WHERE
 		BOARD_SEQ=#{boardSeq}
 	</select>
-	
+
 	<update id="updateBoard" parameterType="BoardVO">
-	
+
 		UPDATE BOARD SET
-			TITLE=#{title}
-			,CONTENT=#{content}
+		TITLE=#{title}
+		,CONTENT=#{content}
 		WHERE
-			BOARD_SEQ=#{boardSeq}
-	
+		BOARD_SEQ=#{boardSeq}
+
 	</update>
-	
+
 	<delete id="deleteContent" parameterType="String">
-		
+
 		DELETE FROM BOARD WHERE BOARD_SEQ=#{boardSeq}
+	</delete>
+
+	<delete id="deleteAllBoard" parameterType="String">
+		DELETE BOARD WHERE
+		ID=#{id}
 	</delete>
 
 </mapper>

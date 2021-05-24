@@ -10,4 +10,5 @@ public interface BoardMapper {
 	public BoardVO selectOne(String boardSeq);
 	public int updateBoard(BoardVO board);
 	public int deleteContent(String boardSeq);
+	public int deleteAllBoard(String id);
 }

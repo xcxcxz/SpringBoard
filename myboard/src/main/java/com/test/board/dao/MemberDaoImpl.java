@@ -42,4 +42,20 @@ public class MemberDaoImpl implements MemberDao {
 		
 	}
 
+	@Override
+	public int deleteMember(String id) {
+		int result = 0;
+		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
+		
+		try {
+			result = mapper.deleteMember(id);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
+	
+	
+
 }

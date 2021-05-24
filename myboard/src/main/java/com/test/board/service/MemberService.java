@@ -8,5 +8,7 @@ public interface MemberService {
 	
 	public MemberVO login(MemberVO member);
 	
+	public int deleteMember(String id);
+	
 
 }

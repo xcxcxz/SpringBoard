@@ -26,7 +26,8 @@
 		)
 	</insert>
 
-	<select id="login" parameterType="MemberVO" resultType="MemberVO">
+	<select id="login" parameterType="MemberVO"
+		resultType="MemberVO">
 		SELECT
 		ID
 		,PW
@@ -42,4 +43,9 @@
 		PW=#{pw}
 
 	</select>
+
+	<delete id="deleteMember" parameterType="String">
+		DELETE MEMBER WHERE
+		ID=#{id}
+	</delete>
 </mapper>

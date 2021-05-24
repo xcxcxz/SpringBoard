@@ -37,7 +37,12 @@ public class MemberController {
 		return "login";
 	}
 	
-	@RequestMapping(value = "/login")
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login() {
+		return "login";
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(MemberVO member, Model model, HttpSession session) {
 		MemberVO result = memberService.login(member);
 		
@@ -61,6 +66,13 @@ public class MemberController {
 	public String logout(MemberVO member, Model model, HttpSession session) {
 		session.invalidate();
 		return "login";
+	}
+	
+	@RequestMapping(value = "/deleteMember", method = RequestMethod.POST)
+	public String deleteMember(HttpSession session) {
+		String id=(String)session.getAttribute("loginId");
+		memberService.deleteMember(id);
+		return "redirect:/";
 	}
 	
 
