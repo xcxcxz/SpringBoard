@@ -1,5 +1,8 @@
 package com.test.board.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.test.board.service.BoardService;
+import com.test.board.service.MailSendService;
 import com.test.board.service.MemberService;
 import com.test.board.vo.MemberVO;
 
@@ -21,6 +25,9 @@ public class MemberController {
 	@Autowired
 	BoardService boardService;
 	
+	@Autowired
+	MailSendService mss;
+	
 	@RequestMapping(value = "/reg", method = RequestMethod.GET)
 	public String insertMember() {
 		return "reg";
@@ -32,8 +39,17 @@ public class MemberController {
 		
 		if(result == 0) {
 			model.addAttribute("message", "이미 사용중 입니다.");
-			return "home";
+			return "reg";
 		}
+		String authKey = mss.sendAuthMail(member.getEmail());
+		member.setAuthkey(authKey);
+		
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("email",  member.getEmail());
+		map.put("authKey", member.getAuthkey());
+		System.out.println(map);
+		memberService.updateAuthKey(map);
+		
 		return "login";
 	}
 	

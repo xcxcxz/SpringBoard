@@ -1,6 +1,8 @@
 package com.test.board.dao;
 
 
+import java.util.Map;
+
 import com.test.board.vo.MemberVO;
 
 public interface MemberDao {
@@ -11,5 +13,6 @@ public interface MemberDao {
 	
 	public int deleteMember(String id);
 	
+	public int updateAuthKey(Map<String, String> map);
 
 }

@@ -9,10 +9,14 @@ public class MemberVO {
 	private String email;
 	private String birthdate;
 	private String regdate;
+	private String authkey;
 	
 	
 	public MemberVO() {}
-	public MemberVO(String id, String pw, String name, String phone, String email, String birthdate, String regdate) {
+
+
+	public MemberVO(String id, String pw, String name, String phone, String email, String birthdate, String regdate,
+			String authkey) {
 		super();
 		this.id = id;
 		this.pw = pw;
@@ -21,52 +25,94 @@ public class MemberVO {
 		this.email = email;
 		this.birthdate = birthdate;
 		this.regdate = regdate;
+		this.authkey = authkey;
 	}
+
+
 	public String getId() {
 		return id;
 	}
+
+
 	public void setId(String id) {
 		this.id = id;
 	}
+
+
 	public String getPw() {
 		return pw;
 	}
+
+
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
+
+
 	public String getName() {
 		return name;
 	}
+
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
 	public String getPhone() {
 		return phone;
 	}
+
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
+
 	public String getEmail() {
 		return email;
 	}
+
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
+
 	public String getBirthdate() {
 		return birthdate;
 	}
+
+
 	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
 	}
+
+
 	public String getRegdate() {
 		return regdate;
 	}
+
+
 	public void setRegdate(String regdate) {
 		this.regdate = regdate;
 	}
+
+
+	public String getAuthkey() {
+		return authkey;
+	}
+
+
+	public void setAuthkey(String authkey) {
+		this.authkey = authkey;
+	}
+
+
 	@Override
 	public String toString() {
-		return "Member [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", email=" + email
-				+ ", birthdate=" + birthdate + ", regdate=" + regdate + "]";
+		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", email=" + email
+				+ ", birthdate=" + birthdate + ", regdate=" + regdate + ", authkey=" + authkey + "]";
 	}
+	
 }

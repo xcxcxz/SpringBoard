@@ -48,4 +48,8 @@
 		DELETE MEMBER WHERE
 		ID=#{id}
 	</delete>
+	
+	<update id="updateAuthKey" parameterType="String">
+		UPDATE MEMBER SET AUTHKEY = #{authkey} where EMAIL = #{email}
+	</update>
 </mapper>

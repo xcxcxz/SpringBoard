@@ -1,5 +1,7 @@
 package com.test.board.dao;
 
+import java.util.Map;
+
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -49,6 +51,20 @@ public class MemberDaoImpl implements MemberDao {
 		
 		try {
 			result = mapper.deleteMember(id);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
+
+	@Override
+	public int updateAuthKey(Map<String, String> map) {
+		int result=0;
+		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
+		
+		try {
+			result = mapper.updateAuthKey(map);
 		}catch(Exception e) {
 			e.printStackTrace();
 			return result;

@@ -1,5 +1,7 @@
 package com.test.board.service;
 
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,5 +35,10 @@ public class MemberServiceImpl implements MemberService{
 			return 0;
 		}
 	}
-
+	@Override
+	public int updateAuthKey(Map<String, String> map) {
+		return memberDao.updateAuthKey(map);
+	}
+	
+	
 }
