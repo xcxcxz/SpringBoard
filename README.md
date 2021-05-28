@@ -10,7 +10,7 @@
   
 1.기능  
 <details>
-  <summary>회원가입/로그인 기능</summary>
+  <summary>회원가입/로그인 기능(펼치기)</summary>
   
 * 회원가입/로그인 기능  
 >- 회원가입시 html ```<input type="email">```을 이용한 이메일 정규식활용.  
@@ -22,7 +22,7 @@
 </details>
   
 <details>
-  <summary>회원탈퇴 기능</summary>
+  <summary>회원탈퇴 기능(펼치기)</summary>
   
 * 회원탈퇴 기능  
 >- 회원탈퇴시 회원이 작성한 모든 게시물 삭제되도록 구현.  
@@ -31,7 +31,7 @@
 </details>
 
 <details>
-  <summary>게시물 기능</summary>
+  <summary>게시물 기능(펼치기)</summary>
   
 * 게시물 작성(DB저장).  
 >- 게시물 작성시 세션에 저장되어있는 Id를 get/set함으로써 DB에 게시물작성자 저장.  
