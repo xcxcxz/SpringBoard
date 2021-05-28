@@ -21,12 +21,16 @@
 ![image](https://user-images.githubusercontent.com/75213468/118922205-94e03a80-b974-11eb-8c0d-a3df8af2bf78.png)  
 </details>
   
+<details>
+  <summary>회원탈퇴 기능</summary>
 * 회원탈퇴 기능  
 >- 회원탈퇴시 회원이 작성한 모든 게시물 삭제되도록 구현.  
 ![image](https://user-images.githubusercontent.com/75213468/119369238-e8dd7d00-bcee-11eb-88bd-75ef00daa141.png)
 ![image](https://user-images.githubusercontent.com/75213468/119369342-04488800-bcef-11eb-89ec-4a6ed5bfdb34.png)
+</details>
 
-
+<details>
+  <summary>게시물 기능</summary>
 * 게시물 작성(DB저장).  
 >- 게시물 작성시 세션에 저장되어있는 Id를 get/set함으로써 DB에 게시물작성자 저장.  
 ![image](https://user-images.githubusercontent.com/75213468/118922906-c1e11d00-b975-11eb-8bad-422cf32e7b73.png)  
@@ -43,7 +47,7 @@
 >- 작성자 id와 로그인 아이디를 ```<c:if>```태그를 이용하여 비교하며, 동일 id일시 게시글 삭제버튼이 나오도록 설정 및 삭제 가능하도록 설정.
 
 ![image](https://user-images.githubusercontent.com/75213468/119148490-7f0f6a00-ba87-11eb-8090-b8ea7f530fd5.png) ![image](https://user-images.githubusercontent.com/75213468/119148936-f644fe00-ba87-11eb-8bdc-1c7785b4fad7.png)  
-
+  </details>
 
 2.테이블설계.  
 >-Member  
