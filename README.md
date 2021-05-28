@@ -56,6 +56,8 @@
 ![image](https://user-images.githubusercontent.com/75213468/119369446-25a97400-bcef-11eb-8786-ef3b1d4b4342.png)  
 Board  
 ![image](https://user-images.githubusercontent.com/75213468/119369623-5a1d3000-bcef-11eb-8a91-145a554135ee.png)
-
+  
+3.구현하고 싶은 기능 및 결과
+* 회원가입시 이메일 인증 기능 - SMTP를 이용한 메일 발송, 링크 클릭을 통해 DB의 AUTHSTATUS를 UPDATE 해주어서 로그인시 AUTHSTATUS를 확인하여 로그인 가능 여부 판단 후 로그인 가능하게 구현완료.    
 
 
