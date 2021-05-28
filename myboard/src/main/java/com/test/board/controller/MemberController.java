@@ -74,8 +74,6 @@ public class MemberController {
 		}
 	}
 	
-	//@GetMapping
-	//public ModelAndView signUpConfirm(@RequestParam )
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public String test(MemberVO member, Model model, HttpSession session) {
