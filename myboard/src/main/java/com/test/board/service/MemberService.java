@@ -1,7 +1,6 @@
 package com.test.board.service;
 
 
-import java.util.Map;
 
 import com.test.board.vo.MemberVO;
 
