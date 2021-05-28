@@ -23,6 +23,7 @@
   
 <details>
   <summary>회원탈퇴 기능</summary>
+  
 * 회원탈퇴 기능  
 >- 회원탈퇴시 회원이 작성한 모든 게시물 삭제되도록 구현.  
 ![image](https://user-images.githubusercontent.com/75213468/119369238-e8dd7d00-bcee-11eb-88bd-75ef00daa141.png)
@@ -31,6 +32,7 @@
 
 <details>
   <summary>게시물 기능</summary>
+  
 * 게시물 작성(DB저장).  
 >- 게시물 작성시 세션에 저장되어있는 Id를 get/set함으로써 DB에 게시물작성자 저장.  
 ![image](https://user-images.githubusercontent.com/75213468/118922906-c1e11d00-b975-11eb-8bad-422cf32e7b73.png)  
