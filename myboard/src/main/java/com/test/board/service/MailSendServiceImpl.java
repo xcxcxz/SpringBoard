@@ -23,7 +23,7 @@ public class MailSendServiceImpl implements MailSendService {
 		String toMail = email;
 		String title = "회원가입 인증 이메일 입니다.";
 		String content = "<h1>[이메일 인증]</h1><br><p>아래 링크를 클릭하시면 이메일 인증이 완료됩니다.</p>"
-                + "<a href='http://localhost:8080/member/signUpConfirm?email=" 
+                + "<a href='http://localhost:8080/board/signUpConfirm?email=" 
                 + email + "&authKey=" + authKey + "' target='_blenk'>이메일 인증 확인</a>";
 		
 		try {

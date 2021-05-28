@@ -10,13 +10,14 @@ public class MemberVO {
 	private String birthdate;
 	private String regdate;
 	private String authkey;
+	private String authstatus;
 	
 	
 	public MemberVO() {}
 
 
 	public MemberVO(String id, String pw, String name, String phone, String email, String birthdate, String regdate,
-			String authkey) {
+			String authkey, String authstatus) {
 		super();
 		this.id = id;
 		this.pw = pw;
@@ -26,6 +27,7 @@ public class MemberVO {
 		this.birthdate = birthdate;
 		this.regdate = regdate;
 		this.authkey = authkey;
+		this.authstatus = authstatus;
 	}
 
 
@@ -109,10 +111,23 @@ public class MemberVO {
 	}
 
 
+	public String getAuthstatus() {
+		return authstatus;
+	}
+
+
+	public void setAuthstatus(String authstatus) {
+		this.authstatus = authstatus;
+	}
+
+
 	@Override
 	public String toString() {
 		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", email=" + email
-				+ ", birthdate=" + birthdate + ", regdate=" + regdate + ", authkey=" + authkey + "]";
+				+ ", birthdate=" + birthdate + ", regdate=" + regdate + ", authkey=" + authkey + ", authstatus="
+				+ authstatus + "]";
 	}
+
+	
 	
 }

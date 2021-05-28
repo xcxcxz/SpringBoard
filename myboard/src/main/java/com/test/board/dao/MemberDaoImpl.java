@@ -71,6 +71,20 @@ public class MemberDaoImpl implements MemberDao {
 		}
 		return result;
 	}
+
+	@Override
+	public int updateAuthStatus(MemberVO member) {
+		int result=0;
+		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
+		
+		try {
+			result = mapper.updateAuthStatus(member);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
 	
 	
 

@@ -52,4 +52,7 @@
 	<update id="updateAuthKey" parameterType="MemberVO">
 		UPDATE MEMBER SET AUTHKEY = #{authkey} where EMAIL = #{email}
 	</update>
+	<update id="updateAuthStatus" parameterType="MemberVO">
+		UPDATE MEMBER SET AUTHSTATUS = 1 where EMAIL = #{email}
+	</update>
 </mapper>

@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.test.board.service.BoardService;
 import com.test.board.service.MailSendService;
@@ -73,7 +74,13 @@ public class MemberController {
 			return "main";
 		}
 	}
-	
+	@RequestMapping(value = "/signUpConfirm", method = RequestMethod.GET)
+	public String signUpConfirm(MemberVO member, Model model) {
+		model.addAttribute("email", member.getEmail());
+		System.out.println(member.getEmail());
+		memberService.updateAuthStatus(member);
+		return "signUpConfirm";
+	}
 
 	@RequestMapping(value = "/test", method = RequestMethod.GET)
 	public String test(MemberVO member, Model model, HttpSession session) {
