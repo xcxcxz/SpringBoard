@@ -9,6 +9,9 @@
 ---------
   
 1.기능  
+<details>
+  <summary>회원가입/로그인 기능</summary>
+  
 * 회원가입/로그인 기능  
 >- 회원가입시 html ```<input type="email">```을 이용한 이메일 정규식활용.  
 ![image](https://user-images.githubusercontent.com/75213468/118921302-edaed380-b972-11eb-99a5-b64343b8a894.png)  
@@ -16,7 +19,8 @@
 ![image](https://user-images.githubusercontent.com/75213468/118921575-61e97700-b973-11eb-9cb8-c7b1a0170420.png)  
 >- 로그인 성공시 Id를 세션에 add하여 세션이 종료될때 까지 로그인이 유지되도록 설정.   
 ![image](https://user-images.githubusercontent.com/75213468/118922205-94e03a80-b974-11eb-8c0d-a3df8af2bf78.png)  
-
+</details>
+  
 * 회원탈퇴 기능  
 >- 회원탈퇴시 회원이 작성한 모든 게시물 삭제되도록 구현.  
 ![image](https://user-images.githubusercontent.com/75213468/119369238-e8dd7d00-bcee-11eb-88bd-75ef00daa141.png)
