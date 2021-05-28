@@ -36,6 +36,7 @@ public class MailSendServiceImpl implements MailSendService {
 			  }catch(Exception e) { e.printStackTrace(); }
 		
 		String num = Integer.toString(authKey);
+		System.out.println(authKey);
 		return num;
 	}
 		

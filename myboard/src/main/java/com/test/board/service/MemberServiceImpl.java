@@ -36,8 +36,8 @@ public class MemberServiceImpl implements MemberService{
 		}
 	}
 	@Override
-	public int updateAuthKey(Map<String, String> map) {
-		return memberDao.updateAuthKey(map);
+	public int updateAuthKey(MemberVO member) {
+		return memberDao.updateAuthKey(member);
 	}
 	
 	

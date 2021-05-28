@@ -49,7 +49,7 @@
 		ID=#{id}
 	</delete>
 	
-	<update id="updateAuthKey" parameterType="String">
+	<update id="updateAuthKey" parameterType="MemberVO">
 		UPDATE MEMBER SET AUTHKEY = #{authkey} where EMAIL = #{email}
 	</update>
 </mapper>

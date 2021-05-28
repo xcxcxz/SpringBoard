@@ -1,6 +1,5 @@
 package com.test.board.service;
 
-import java.util.Map;
 
 import com.test.board.vo.MemberVO;
 
@@ -12,6 +11,6 @@ public interface MemberService {
 	
 	public int deleteMember(String id);
 	
-	public int updateAuthKey(Map<String, String> map);
+	public int updateAuthKey(MemberVO member);
 
 }

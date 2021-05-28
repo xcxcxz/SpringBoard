@@ -59,12 +59,12 @@ public class MemberDaoImpl implements MemberDao {
 	}
 
 	@Override
-	public int updateAuthKey(Map<String, String> map) {
+	public int updateAuthKey(MemberVO member) {
 		int result=0;
 		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
 		
 		try {
-			result = mapper.updateAuthKey(map);
+			result = mapper.updateAuthKey(member);
 		}catch(Exception e) {
 			e.printStackTrace();
 			return result;
