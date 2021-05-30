@@ -60,6 +60,7 @@ Board
 3.구현하고 싶은 기능 및 결과
   <details>
   <summary>회원가입시 이메일 인증 기능(펼치기)</summary>  
+    
 >- SMTP를 이용한 메일 발송, 링크 클릭을 통해 DB의 AUTHSTATUS를 UPDATE 해주어서 로그인시 AUTHSTATUS를 확인하여 로그인 가능 여부 판단 후 로그인 가능하게 구현완료.  
 ![image](https://user-images.githubusercontent.com/75213468/120108462-2edb8a80-c1a0-11eb-9ef8-5d177fa41e5e.png)  
 ![image](https://user-images.githubusercontent.com/75213468/120108404-f8057480-c19f-11eb-9136-619d974b2f5f.png)
