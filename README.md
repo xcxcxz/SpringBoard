@@ -54,6 +54,9 @@
 2.테이블설계.  
 >-Member  
 ![image](https://user-images.githubusercontent.com/75213468/119369446-25a97400-bcef-11eb-8786-ef3b1d4b4342.png)  
+![image](https://user-images.githubusercontent.com/75213468/120108596-d48ef980-c1a0-11eb-903d-8cfa5f55c731.png)  
+  (이메일 인증 기능 추가를 위한 authkey와 authstatus 추가)
+
 Board  
 ![image](https://user-images.githubusercontent.com/75213468/119369623-5a1d3000-bcef-11eb-8a91-145a554135ee.png)
   
