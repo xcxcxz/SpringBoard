@@ -68,7 +68,11 @@ public class MemberController {
 		if (result == null) {
 			model.addAttribute("message", "Id와 비밀번호를 확인하십시오.");
 			return "login";
-		} else {
+		} else if(result.getAuthstatus() == null){
+			model.addAttribute("message", "이메일인증이 완료 되지 않았습니다. 회원가입시 등록하신 이메일을 확인하여 인증을 완료 해주세요");
+			return "login";
+		}
+		else {
 			session.setAttribute("loginId", result.getId());
 			model.addAttribute("list", boardService.selectAll());
 			return "main";
