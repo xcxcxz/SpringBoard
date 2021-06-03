@@ -49,6 +49,12 @@
 >- 작성자 id와 로그인 아이디를 ```<c:if>```태그를 이용하여 비교하며, 동일 id일시 게시글 삭제버튼이 나오도록 설정 및 삭제 가능하도록 설정.
 
 ![image](https://user-images.githubusercontent.com/75213468/119148490-7f0f6a00-ba87-11eb-8090-b8ea7f530fd5.png) ![image](https://user-images.githubusercontent.com/75213468/119148936-f644fe00-ba87-11eb-8bdc-1c7785b4fad7.png)  
+  
+* 게시물 페이징처리.  
+>- 게시물 페이징 처리
+  
+![image](https://user-images.githubusercontent.com/75213468/120614259-00a4c600-c492-11eb-9a4d-54a4d3919419.png) ![image](https://user-images.githubusercontent.com/75213468/120614302-0bf7f180-c492-11eb-8b89-bb5fccd65496.png)  
+
   </details>
 
 2.테이블설계.  
