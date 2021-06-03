@@ -19,6 +19,11 @@
 ![image](https://user-images.githubusercontent.com/75213468/118921575-61e97700-b973-11eb-9cb8-c7b1a0170420.png)  
 >- 로그인 성공시 Id를 세션에 add하여 세션이 종료될때 까지 로그인이 유지되도록 설정.   
 ![image](https://user-images.githubusercontent.com/75213468/118922205-94e03a80-b974-11eb-8c0d-a3df8af2bf78.png)  
+>- 회원가입시 jquery / ajax를 이용한 중복확인 기능 구현.(아이디 비중복시 회원가입 버튼 활성화)  
+![image](https://user-images.githubusercontent.com/75213468/120637211-90a23a00-c4a9-11eb-8712-e8b991b5a503.png)  
+![image](https://user-images.githubusercontent.com/75213468/120637333-ba5b6100-c4a9-11eb-8617-1ef218b6e2f9.png)  
+
+
 </details>
   
 <details>
@@ -55,6 +60,11 @@
 >- 게시물 페이징 처리
   
 ![image](https://user-images.githubusercontent.com/75213468/120614259-00a4c600-c492-11eb-9a4d-54a4d3919419.png) ![image](https://user-images.githubusercontent.com/75213468/120614302-0bf7f180-c492-11eb-8b89-bb5fccd65496.png)  
+
+* 게시물 검색기능.  
+>- 게시물 겸색기능
+  
+![image](https://user-images.githubusercontent.com/75213468/120619879-5f207300-c497-11eb-939e-c0b72ca460a9.png)
 
   </details>
 
