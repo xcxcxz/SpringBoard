@@ -61,7 +61,7 @@ public class MemberController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(MemberVO member, Model model, HttpSession session, Paging navi) {
+	public String login(MemberVO member, Model model, HttpSession session, Paging navi, String searchWord) {
 		MemberVO result = memberService.login(member);
 
 		if (result == null) {
@@ -73,7 +73,7 @@ public class MemberController {
 		}
 		else {
 			session.setAttribute("loginId", result.getId());
-			model.addAttribute("list", boardService.selectAll(navi));
+			model.addAttribute("list", boardService.selectAll(searchWord, navi));
 			return "main";
 		}
 	}

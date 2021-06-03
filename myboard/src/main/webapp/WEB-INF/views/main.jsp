@@ -22,49 +22,12 @@
 		<input type="submit" value="logout">
 	</form>
 	<a href="/board/write">게시글 작성</a>
-	<table>
-		<tr>
-			<td>제목</td>
-			<td>작성자</td>
-			<td>작성일</td>
-		</tr>
-
-		<c:forEach items="${list}" var="board">
-			<tr>
-				<td><a href="contentDetail?boardSeq=${board.boardSeq}">${board.title}</a></td>
-				<td>${board.id}</td>
-				<td>${board.regdate}</td>
-			</tr>
-		</c:forEach>
-	</table>
-	<div>
-		<c:if test="${navi.currentPage ne 1 }">
-			<a href="getBoardlist?page=1">[처음]</a>
-		</c:if>
-		<c:if test="${navi.currentPage ne 1}">
-			<a href="getBoardlist?page=${navi.currentPage-1 }">[이전]</a>
-		</c:if>
-		<c:forEach var="counter" begin="${navi.startPageGroup }"
-			end="${navi.endPageGroup }">
-			<c:choose>
-				<c:when test="${navi.currentPage eq  page}">
-					<span style="font-weight: bold;"><a
-						href="getBoardlist?page=${counter}">${counter}</a></span>
-				</c:when>
-				<c:otherwise>
-					<a href="getBoardlist?page=${counter}">${counter}</a>
-				</c:otherwise>
-			</c:choose>
-		</c:forEach>
-		<c:if
-			test="${navi.currentPage ne navi.endPageGroup+1 && navi.endPageGroup+1 > 0}">
-			<a href="getBoardlist?page=${navi.endPageGroup+1 }">[다음]</a>
-		</c:if>
-		<c:if
-			test="${navi.currentPage ne navi.totalRecordsCount && navi.totalRecordsCount > 0}">
-			<a href="getBoardlist?page=${navi.totalPageCount }">[끝]</a>
-		</c:if>
-	</div>
+	<a href="/board/getBoardlist">게시글 목록</a>
+	
+	<form action="getBoardlist" method="get">
+	<input type="hidden" value="${navi.currentPage}">검색 : <input type="text" name="searchWord" value="${searchword}">
+	<input type="submit" value="검색">
+	</form>
 
 
 

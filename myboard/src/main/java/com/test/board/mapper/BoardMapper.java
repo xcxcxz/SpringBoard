@@ -13,6 +13,6 @@ public interface BoardMapper {
 	public int updateBoard(BoardVO board);
 	public int deleteContent(String boardSeq);
 	public int deleteAllBoard(String id);
-	public int boardListCnt();
-	public ArrayList<BoardVO> selectAll(RowBounds rb);
+	public int boardListCnt(String searchWord);
+	public ArrayList<BoardVO> selectAll(String searchWork, RowBounds rb);
 }

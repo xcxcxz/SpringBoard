@@ -9,7 +9,7 @@ public interface BoardService {
 	
 	public int insertContent(BoardVO board);
 	
-	public ArrayList<BoardVO> selectAll(Paging navi);
+	public ArrayList<BoardVO> selectAll(String searchWord, Paging navi);
 	
 	public BoardVO selectOne(String boardSeq);
 	
@@ -17,7 +17,7 @@ public interface BoardService {
 	
 	public int updateBoard(BoardVO board);
 	
-	public int selectCount();
+	public int selectCount(String searchWord);
 	
 	
 

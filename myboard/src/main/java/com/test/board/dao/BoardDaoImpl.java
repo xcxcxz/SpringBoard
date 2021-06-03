@@ -30,13 +30,13 @@ public class BoardDaoImpl implements BoardDao{
 		return result;
 	}
 	
-	public ArrayList<BoardVO> selectAll(Paging navi){
+	public ArrayList<BoardVO> selectAll(String searchWord, Paging navi){
 		ArrayList<BoardVO> list = new ArrayList<BoardVO>();
 		
 		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
 		try {
 			RowBounds rb= new RowBounds(navi.getStartRecord(), navi.getCountPerPage());
-			list = mapper.selectAll(rb);
+			list = mapper.selectAll(searchWord, rb);
 		}catch (Exception e) {
 			e.printStackTrace();
 			return list;
@@ -99,11 +99,11 @@ public class BoardDaoImpl implements BoardDao{
 	}
 
 	@Override
-	public int selectCount() {
+	public int selectCount(String searchWord) {
 		int result = 0;
 		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
 		try {
-			result = mapper.boardListCnt();
+			result = mapper.boardListCnt(searchWord);
 		}catch(Exception e) {
 			e.printStackTrace();
 			return result;

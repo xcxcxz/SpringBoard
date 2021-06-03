@@ -43,11 +43,12 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/getBoardlist", method = RequestMethod.GET)
-	public String getBoard(Model model, @RequestParam(value="page", defaultValue="1") int page) {
-		Paging navi= new Paging(COUNTPERPAGE, PAGEPERGROUP, page, boardService.selectCount());
-		model.addAttribute("list", boardService.selectAll(navi));
+	public String getBoard(Model model, @RequestParam(value="page", defaultValue="1") int page, String searchWord) {
+		Paging navi= new Paging(COUNTPERPAGE, PAGEPERGROUP, page, boardService.selectCount(searchWord));
+		model.addAttribute("list", boardService.selectAll(searchWord, navi));
 		model.addAttribute("navi", navi);
-		return "main";
+		model.addAttribute("searchWord", searchWord);
+		return "list";
 	}
 
 	@RequestMapping(value = "/contentDetail", method = RequestMethod.GET)

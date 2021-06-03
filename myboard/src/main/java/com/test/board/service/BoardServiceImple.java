@@ -21,8 +21,8 @@ public class BoardServiceImple implements BoardService{
 	}
 
 	@Override
-	public ArrayList<BoardVO> selectAll(Paging navi) {
-		return boardDao.selectAll(navi);
+	public ArrayList<BoardVO> selectAll(String searchWord, Paging navi) {
+		return boardDao.selectAll(searchWord, navi);
 	}
 
 	@Override
@@ -41,8 +41,8 @@ public class BoardServiceImple implements BoardService{
 	}
 
 	@Override
-	public int selectCount() {
-		return boardDao.selectCount();
+	public int selectCount(String searchWord) {
+		return boardDao.selectCount(searchWord);
 	}
 	
 	

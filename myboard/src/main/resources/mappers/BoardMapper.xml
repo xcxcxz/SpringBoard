@@ -32,6 +32,9 @@
 		,REGDATE
 		FROM
 		BOARD
+	<if test="_parameter != null">
+		WHERE TITLE LIKE '%'||#{searchWord}||'%'
+	</if>
 
 	</select>
 
@@ -73,5 +76,7 @@
 	<select id="boardListCnt" resultType="int">
 	SELECT COUNT(*) FROM BOARD
 	</select>
+	
+
 
 </mapper>
