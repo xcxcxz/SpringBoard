@@ -11,4 +11,5 @@ public interface MemberMapper {
 	public int deleteMember(String id);
 	public int updateAuthKey(MemberVO member);
 	public int updateAuthStatus(MemberVO member);
+	public int idCheck(MemberVO member);
 }

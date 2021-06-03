@@ -17,5 +17,7 @@ public interface MemberDao {
 	public int updateAuthKey(MemberVO member);
 	
 	public int updateAuthStatus(MemberVO member);
+	
+	public int idCheck(MemberVO member);
 
 }

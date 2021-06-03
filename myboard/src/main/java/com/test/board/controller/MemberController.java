@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.test.board.page.Paging;
 import com.test.board.service.BoardService;
@@ -39,7 +40,6 @@ public class MemberController {
 		int result = memberService.insertMember(member);
 
 		if (result == 0) {
-			model.addAttribute("message", "이미 사용중 입니다.");
 			return "reg";
 		} else {
 			String authKey = mss.sendAuthMail(member.getEmail());
@@ -55,6 +55,17 @@ public class MemberController {
 		return "login";
 	}
 
+	// 중복 확인
+	@RequestMapping(value = "/idCheck", method = RequestMethod.POST)
+	@ResponseBody
+	public int idCheck(MemberVO memberVO) throws Exception {
+
+		int result = memberService.idCheck(memberVO); 
+
+		System.out.println(result);
+		return result;
+	}
+
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login() {
 		return "login";
@@ -67,16 +78,16 @@ public class MemberController {
 		if (result == null) {
 			model.addAttribute("message", "Id와 비밀번호를 확인하십시오.");
 			return "login";
-		} else if(result.getAuthstatus() == null){
+		} else if (result.getAuthstatus() == null) {
 			model.addAttribute("message", "이메일인증이 완료 되지 않았습니다. 회원가입시 등록하신 이메일을 확인하여 인증을 완료 해주세요");
 			return "login";
-		}
-		else {
+		} else {
 			session.setAttribute("loginId", result.getId());
 			model.addAttribute("list", boardService.selectAll(searchWord, navi));
 			return "main";
 		}
 	}
+
 	@RequestMapping(value = "/signUpConfirm", method = RequestMethod.GET)
 	public String signUpConfirm(MemberVO member, Model model) {
 		model.addAttribute("email", member.getEmail());

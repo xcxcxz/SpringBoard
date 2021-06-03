@@ -15,5 +15,7 @@ public interface MemberService {
 	public int updateAuthKey(MemberVO member);
 	
 	public int updateAuthStatus(MemberVO member);
+	
+	public int idCheck(MemberVO member);
 
 }

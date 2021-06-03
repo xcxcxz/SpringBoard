@@ -85,6 +85,16 @@ public class MemberDaoImpl implements MemberDao {
 		}
 		return result;
 	}
+
+	@Override
+	public int idCheck(MemberVO member) {
+		
+		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
+		int result=mapper.idCheck(member);
+		System.out.println(result);
+		
+		return result;
+	}
 	
 	
 

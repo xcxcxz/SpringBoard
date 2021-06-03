@@ -43,6 +43,10 @@ public class MemberServiceImpl implements MemberService{
 	public int updateAuthStatus(MemberVO member) {
 		return memberDao.updateAuthStatus(member);
 	}
+	@Override
+	public int idCheck(MemberVO member) {
+		return memberDao.idCheck(member);
+	}
 	
 	
 }

@@ -9,7 +9,7 @@
 <body>
 <h1>로그인</h1>
 	<a href = "/board/reg">회원가입</a>
-	<form action="login" method="post">
+	<form action="login" onsubmit="return test()" method="post">
 		
 		ID:<input type="text" name="id"><br>
 		PW:<input type="password" name="pw"><br>
