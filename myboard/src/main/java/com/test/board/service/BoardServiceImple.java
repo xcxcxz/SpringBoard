@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.test.board.dao.BoardDao;
+import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
 
 @Service
@@ -20,8 +21,8 @@ public class BoardServiceImple implements BoardService{
 	}
 
 	@Override
-	public ArrayList<BoardVO> selectAll() {
-		return boardDao.selectAll();
+	public ArrayList<BoardVO> selectAll(Paging navi) {
+		return boardDao.selectAll(navi);
 	}
 
 	@Override
@@ -38,6 +39,12 @@ public class BoardServiceImple implements BoardService{
 	public int updateBoard(BoardVO board) {
 		return boardDao.updateBoard(board);
 	}
+
+	@Override
+	public int selectCount() {
+		return boardDao.selectCount();
+	}
+	
 	
 	
 	

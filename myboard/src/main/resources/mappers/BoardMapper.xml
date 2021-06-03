@@ -69,5 +69,9 @@
 		DELETE BOARD WHERE
 		ID=#{id}
 	</delete>
+	
+	<select id="boardListCnt" resultType="int">
+	SELECT COUNT(*) FROM BOARD
+	</select>
 
 </mapper>

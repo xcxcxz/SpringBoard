@@ -10,9 +10,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
+import com.test.board.page.Paging;
 import com.test.board.service.BoardService;
 import com.test.board.service.MailSendService;
 import com.test.board.service.MemberService;
@@ -62,7 +61,7 @@ public class MemberController {
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
-	public String login(MemberVO member, Model model, HttpSession session) {
+	public String login(MemberVO member, Model model, HttpSession session, Paging navi) {
 		MemberVO result = memberService.login(member);
 
 		if (result == null) {
@@ -74,7 +73,7 @@ public class MemberController {
 		}
 		else {
 			session.setAttribute("loginId", result.getId());
-			model.addAttribute("list", boardService.selectAll());
+			model.addAttribute("list", boardService.selectAll(navi));
 			return "main";
 		}
 	}

@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-		
+
 	<h1>${sessionScope.loginId}님의페이지</h1>
 
 	<form action="deleteMember" method="post"
@@ -37,6 +37,36 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<div>
+		<c:if test="${navi.currentPage ne 1 }">
+			<a href="getBoardlist?page=1">[처음]</a>
+		</c:if>
+		<c:if test="${navi.currentPage ne 1}">
+			<a href="getBoardlist?page=${navi.currentPage-1 }">[이전]</a>
+		</c:if>
+		<c:forEach var="counter" begin="${navi.startPageGroup }"
+			end="${navi.endPageGroup }">
+			<c:choose>
+				<c:when test="${navi.currentPage eq  page}">
+					<span style="font-weight: bold;"><a
+						href="getBoardlist?page=${counter}">${counter}</a></span>
+				</c:when>
+				<c:otherwise>
+					<a href="getBoardlist?page=${counter}">${counter}</a>
+				</c:otherwise>
+			</c:choose>
+		</c:forEach>
+		<c:if
+			test="${navi.currentPage ne navi.endPageGroup+1 && navi.endPageGroup+1 > 0}">
+			<a href="getBoardlist?page=${navi.endPageGroup+1 }">[다음]</a>
+		</c:if>
+		<c:if
+			test="${navi.currentPage ne navi.totalRecordsCount && navi.totalRecordsCount > 0}">
+			<a href="getBoardlist?page=${navi.totalPageCount }">[끝]</a>
+		</c:if>
+	</div>
+
+
 
 </body>
 </html>

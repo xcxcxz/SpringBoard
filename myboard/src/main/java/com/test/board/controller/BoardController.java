@@ -5,15 +5,20 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.test.board.page.Paging;
 import com.test.board.service.BoardService;
 import com.test.board.vo.BoardVO;
 
 @Controller
 public class BoardController {
 
+	private static final int COUNTPERPAGE = 10;
+	private static final int PAGEPERGROUP = 10;
 	@Autowired
 	BoardService boardService;
 
@@ -38,8 +43,10 @@ public class BoardController {
 	}
 
 	@RequestMapping(value = "/getBoardlist", method = RequestMethod.GET)
-	public String getBoard(Model model) {
-		model.addAttribute("list", boardService.selectAll());
+	public String getBoard(Model model, @RequestParam(value="page", defaultValue="1") int page) {
+		Paging navi= new Paging(COUNTPERPAGE, PAGEPERGROUP, page, boardService.selectCount());
+		model.addAttribute("list", boardService.selectAll(navi));
+		model.addAttribute("navi", navi);
 		return "main";
 	}
 

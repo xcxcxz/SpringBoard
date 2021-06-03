@@ -2,11 +2,13 @@ package com.test.board.dao;
 
 import java.util.ArrayList;
 
+import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.test.board.mapper.BoardMapper;
+import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
 
 @Repository
@@ -28,12 +30,13 @@ public class BoardDaoImpl implements BoardDao{
 		return result;
 	}
 	
-	public ArrayList<BoardVO> selectAll(){
+	public ArrayList<BoardVO> selectAll(Paging navi){
 		ArrayList<BoardVO> list = new ArrayList<BoardVO>();
 		
 		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
 		try {
-			list = mapper.selectAll();
+			RowBounds rb= new RowBounds(navi.getStartRecord(), navi.getCountPerPage());
+			list = mapper.selectAll(rb);
 		}catch (Exception e) {
 			e.printStackTrace();
 			return list;
@@ -94,10 +97,21 @@ public class BoardDaoImpl implements BoardDao{
 		}
 		return result;
 	}
+
+	@Override
+	public int selectCount() {
+		int result = 0;
+		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
+		try {
+			result = mapper.boardListCnt();
+		}catch(Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
 	
-	
-	
-	
+
 	
 
 }
