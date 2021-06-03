@@ -27,6 +27,7 @@
 * 회원탈퇴 기능  
 >- 회원탈퇴시 회원이 작성한 모든 게시물 삭제되도록 구현.  
 ![image](https://user-images.githubusercontent.com/75213468/119369238-e8dd7d00-bcee-11eb-88bd-75ef00daa141.png)
+![image](https://user-images.githubusercontent.com/75213468/120614677-714be280-c492-11eb-81ec-3e9924a55fd5.png)
 ![image](https://user-images.githubusercontent.com/75213468/119369342-04488800-bcef-11eb-89ec-4a6ed5bfdb34.png)
 </details>
 
