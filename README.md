@@ -56,6 +56,11 @@
   
 ![image](https://user-images.githubusercontent.com/75213468/120614259-00a4c600-c492-11eb-9a4d-54a4d3919419.png) ![image](https://user-images.githubusercontent.com/75213468/120614302-0bf7f180-c492-11eb-8b89-bb5fccd65496.png)  
 
+* 게시물 검색기능.  
+>- 게시물 겸색기능
+  
+![image](https://user-images.githubusercontent.com/75213468/120619879-5f207300-c497-11eb-939e-c0b72ca460a9.png)
+
   </details>
 
 2.테이블설계.  
