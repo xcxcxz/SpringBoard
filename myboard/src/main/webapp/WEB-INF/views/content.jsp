@@ -15,6 +15,8 @@
 	작성자 : ${board.id}<br> 
 	작성일 : ${board.regdate}<br>
 	내용 : ${board.content}<br>
+	
+	파일 : <a href="downloadFile?fileSeq=${file.fileSeq}">${file.orgName}</a>
 
 	<c:if test="${sessionScope.loginId==board.id}">
 		<form action="deleteContent" method="post">

@@ -10,6 +10,7 @@
 			alias="MemberVO" />
 		<typeAlias type="com.test.board.vo.BoardVO" alias="BoardVO" />
 		<typeAlias type="com.test.board.vo.ReplyVO" alias="ReplyVO" />
+		<typeAlias type="com.test.board.vo.FileVO" alias="FileVO" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mappers/MemberMapper.xml" />

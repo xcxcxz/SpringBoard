@@ -32,9 +32,9 @@
 		,REGDATE
 		FROM
 		BOARD
-	<if test="_parameter != null">
-		WHERE TITLE LIKE '%'||#{searchWord}||'%'
-	</if>
+		<if test="_parameter != null">
+			WHERE TITLE LIKE '%'||#{searchWord}||'%'
+		</if>
 
 	</select>
 
@@ -65,18 +65,19 @@
 
 	<delete id="deleteContent" parameterType="String">
 
-		DELETE FROM BOARD WHERE BOARD_SEQ=#{boardSeq}
+		DELETE FROM BOARD WHERE
+		BOARD_SEQ=#{boardSeq}
 	</delete>
 
 	<delete id="deleteAllBoard" parameterType="String">
 		DELETE BOARD WHERE
 		ID=#{id}
 	</delete>
-	
+
 	<select id="boardListCnt" resultType="int">
-	SELECT COUNT(*) FROM BOARD
+		SELECT COUNT(*) FROM BOARD
 	</select>
-	
+
 	<insert id="insertReply" parameterType="ReplyVO">
 		INSERT INTO REPLY(
 		REPLYSEQ,
@@ -91,11 +92,35 @@
 		#{content},
 		sysdate)
 	</insert>
-	
-	<select id="selectReply" parameterType="String" resultType="HashMap">
-	SELECT * FROM REPLY WHERE BOARD_SEQ=#{boardSeq} ORDER BY REGDATE DESC
+
+	<select id="selectReply" parameterType="String"
+		resultType="HashMap">
+		SELECT * FROM REPLY WHERE BOARD_SEQ=#{boardSeq} ORDER BY REGDATE DESC
+	</select>
+
+	<insert id="insertFile" parameterType="FileVO">
+		INSERT INTO FILEINFO
+		(FILESEQ, BOARD_SEQ, ORG_NAME, SAV_NAME) VALUES (FILESEQ.NEXTVAL,
+		BOARD_SEQ.CURRVAL, #{orgName}, #{savName})
+	</insert>
+
+	<select id="selectFile" resultType="FileVO" parameterType="String">
+		SELECT
+		FILESEQ fileSeq,
+		BOARD_SEQ boardSeq,
+		ORG_NAME orgName,
+		SAV_NAME savName
+		FROM
+		FILEINFO
+		WHERE
+		BOARD_SEQ = #{boardSeq}
 	</select>
 	
+	<select id="selectFileBySeq" parameterType="String" resultType="FileVO">
+		SELECT FILESEQ fileSeq, BOARD_SEQ boardSeq, ORG_NAME orgName, SAV_NAME savName
+		FROM FILEINFO WHERE FILESEQ = #{fileSeq}
+	</select>
+
 
 
 </mapper>

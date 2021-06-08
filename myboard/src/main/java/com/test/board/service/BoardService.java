@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.FileVO;
 import com.test.board.vo.ReplyVO;
 
 public interface BoardService {
@@ -24,6 +25,12 @@ public interface BoardService {
 	public int insertReply(ReplyVO reply);
 	
 	public ArrayList<HashMap<String,String>> selectReply(String boardSeq);
+	
+	public int insertFile(FileVO fvo);
+	
+	public FileVO selectFile(String boardSeq);
+	
+	public FileVO selectFileBySeq(String fileSeq);
 	
 	
 

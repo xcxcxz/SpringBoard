@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.test.board.dao.BoardDao;
 import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.FileVO;
 import com.test.board.vo.ReplyVO;
 
 @Service
@@ -56,6 +57,22 @@ public class BoardServiceImple implements BoardService{
 	public ArrayList<HashMap<String, String>> selectReply(String boardSeq) {
 		return boardDao.selectReply(boardSeq);
 	}
+
+	@Override
+	public int insertFile(FileVO fvo) {
+		return boardDao.insertFile(fvo);
+	}
+
+	@Override
+	public FileVO selectFile(String boardSeq) {
+		return boardDao.selectFile(boardSeq);
+	}
+
+	@Override
+	public FileVO selectFileBySeq(String fileSeq) {
+		return boardDao.selectFileBySeq(fileSeq);
+	}
+	
 	
 	
 	
