@@ -64,7 +64,12 @@
 * 게시물 검색기능.  
 >- 게시물 겸색기능
   
-![image](https://user-images.githubusercontent.com/75213468/120619879-5f207300-c497-11eb-939e-c0b72ca460a9.png)
+![image](https://user-images.githubusercontent.com/75213468/120619879-5f207300-c497-11eb-939e-c0b72ca460a9.png)  
+
+* 게시물 댓글기능.  
+>- 댓글기능 추가를 위한 REPLY테이블 생성 및 세션에서 로그인 한 사용자의 정보를 가져와서 댓글등록시 사용.
+  
+![image](https://user-images.githubusercontent.com/75213468/121128470-67492b80-c866-11eb-8998-c81a9190b7ef.png)  
 
   </details>
 
