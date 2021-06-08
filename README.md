@@ -79,6 +79,7 @@
 ![image](https://user-images.githubusercontent.com/75213468/120108596-d48ef980-c1a0-11eb-903d-8cfa5f55c731.png) (이메일 인증 기능 추가를 위한 authkey와 authstatus 추가)  
 Board  
 ![image](https://user-images.githubusercontent.com/75213468/119369623-5a1d3000-bcef-11eb-8a91-145a554135ee.png)  
+REPLY  
 ![image](https://user-images.githubusercontent.com/75213468/121128791-eb031800-c866-11eb-9564-f07af2a7adec.png) (댓글기능 추가로 인한 REPLY테이블 추가)
 
   
