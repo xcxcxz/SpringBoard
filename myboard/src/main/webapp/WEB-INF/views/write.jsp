@@ -9,6 +9,7 @@
 </head>
 <body>
 	<h1>게시글 작성</h1>
+	<a href="/board/getBoardlist">목록으로</a>
 	<c:if test="${board.boardSeq != null}">
 		<form action="updateBoard" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="boardSeq" value="${board.boardSeq}">
