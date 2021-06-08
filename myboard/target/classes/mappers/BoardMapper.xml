@@ -77,6 +77,25 @@
 	SELECT COUNT(*) FROM BOARD
 	</select>
 	
+	<insert id="insertReply" parameterType="ReplyVO">
+		INSERT INTO REPLY(
+		REPLYSEQ,
+		BOARD_SEQ,
+		ID,
+		CONTENT,
+		REGDATE)
+		VALUES(
+		REPLYSEQ.NEXTVAL,
+		#{boardSeq},
+		#{id},
+		#{content},
+		sysdate)
+	</insert>
+	
+	<select id="selectReply" parameterType="String" resultType="HashMap">
+	SELECT * FROM REPLY WHERE BOARD_SEQ=#{boardSeq} ORDER BY REGDATE DESC
+	</select>
+	
 
 
 </mapper>

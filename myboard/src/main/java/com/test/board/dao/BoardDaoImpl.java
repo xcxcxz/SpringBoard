@@ -1,6 +1,7 @@
 package com.test.board.dao;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.ibatis.session.RowBounds;
 import org.apache.ibatis.session.SqlSession;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Repository;
 import com.test.board.mapper.BoardMapper;
 import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.ReplyVO;
 
 @Repository
 public class BoardDaoImpl implements BoardDao{
@@ -110,6 +112,36 @@ public class BoardDaoImpl implements BoardDao{
 		}
 		return result;
 	}
+
+	@Override
+	public ArrayList<HashMap<String, String>> selectReply(String boardSeq) {
+		ArrayList<HashMap<String, String>> result = null;
+		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
+		try {
+			result = mapper.selectReply(boardSeq);
+		}catch (Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
+
+	@Override
+	public int insertReply(ReplyVO reply) {
+		int result = 0;
+		
+		BoardMapper mapper = sqlSession.getMapper(BoardMapper.class);
+		
+		try {
+			result = mapper.insertReply(reply);
+		}catch(Exception e) {
+			e.printStackTrace();
+			return result;
+		}
+		return result;
+	}
+	
+	
 	
 
 	

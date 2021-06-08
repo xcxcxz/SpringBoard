@@ -1,10 +1,12 @@
 package com.test.board.mapper;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.apache.ibatis.session.RowBounds;
 
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.ReplyVO;
 
 public interface BoardMapper {
 	public int insertContent(BoardVO board);
@@ -15,4 +17,6 @@ public interface BoardMapper {
 	public int deleteAllBoard(String id);
 	public int boardListCnt(String searchWord);
 	public ArrayList<BoardVO> selectAll(String searchWork, RowBounds rb);
+	public int insertReply(ReplyVO reply);
+	public ArrayList<HashMap<String,String>> selectReply(String boardSeq);
 }

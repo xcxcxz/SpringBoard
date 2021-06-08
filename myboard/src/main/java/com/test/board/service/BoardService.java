@@ -1,9 +1,11 @@
 package com.test.board.service;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.ReplyVO;
 
 public interface BoardService {
 	
@@ -18,6 +20,10 @@ public interface BoardService {
 	public int updateBoard(BoardVO board);
 	
 	public int selectCount(String searchWord);
+	
+	public int insertReply(ReplyVO reply);
+	
+	public ArrayList<HashMap<String,String>> selectReply(String boardSeq);
 	
 	
 

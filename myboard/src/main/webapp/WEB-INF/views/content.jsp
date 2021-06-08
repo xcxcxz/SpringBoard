@@ -27,6 +27,17 @@
 	</form>
 	</c:if>
 	<br>
+	<form action="insertReply" method="post">
+	<input type="hidden" value="${board.boardSeq}" name="boardSeq">
+	댓글 : <input type="text" name="content"> <input type="submit" value="댓글등록">
+	</form>
+	<br>
+	댓글목록
+	<br>
+	<c:forEach items="${reply}" var="hMap">
+	${hMap.ID} : ${hMap.CONTENT} - ${hMap.REGDATE}
+	<br>
+	</c:forEach>
 
 	<a href="/board/getBoardlist">목록으로</a>
 

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.test.board.page.Paging;
 import com.test.board.service.BoardService;
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.ReplyVO;
 
 @Controller
 public class BoardController {
@@ -55,6 +56,7 @@ public class BoardController {
 	public String boardDetail(String boardSeq, Model model) {
 
 		model.addAttribute("board", boardService.selectOne(boardSeq));
+		model.addAttribute("reply", boardService.selectReply(boardSeq));
 
 		return "content";
 	}
@@ -97,5 +99,19 @@ public class BoardController {
 			}
 		}
 		return "redirect:/getBoardlist";
+	}
+	
+	@RequestMapping(value = "/insertReply", method = RequestMethod.POST)
+	public String insertReply(ReplyVO reply, HttpSession session) {
+		if(session.getAttribute("loginId") == null) {
+			return "login";
+		}else {
+			String id = (String) session.getAttribute("loginId");
+			
+			reply.setId(id);
+			boardService.insertReply(reply);
+			return "redirect:/contentDetail?boardSeq=" + reply.getBoardSeq();
+			
+		}
 	}
 }
