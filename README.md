@@ -71,6 +71,12 @@
   
 ![image](https://user-images.githubusercontent.com/75213468/121128470-67492b80-c866-11eb-8998-c81a9190b7ef.png)  
 
+* 게시물 파일 업/다운로드 기능.  
+>- MultipartFile을 이용한파일 업/다운로드를 구현.  
+
+![image](https://user-images.githubusercontent.com/75213468/121160961-84422680-c887-11eb-983c-a71568b0fd0f.png) ![image](https://user-images.githubusercontent.com/75213468/121161321-d4b98400-c887-11eb-8671-831df00cc9f8.png)  
+
+
   </details>
 
 2.테이블설계.  
@@ -80,7 +86,10 @@
 Board  
 ![image](https://user-images.githubusercontent.com/75213468/119369623-5a1d3000-bcef-11eb-8a91-145a554135ee.png)  
 REPLY  
-![image](https://user-images.githubusercontent.com/75213468/121128791-eb031800-c866-11eb-9564-f07af2a7adec.png) (댓글기능 추가로 인한 REPLY테이블 추가)
+![image](https://user-images.githubusercontent.com/75213468/121128791-eb031800-c866-11eb-9564-f07af2a7adec.png) (댓글기능 추가로 인한 REPLY테이블 추가)  
+FILE  
+![image](https://user-images.githubusercontent.com/75213468/121161457-f7e43380-c887-11eb-9bfd-0954dcad02f2.png) (FILE 업/다운로드를 위한 FILE 테이블 추가)  
+
 
   
 3.구현하고 싶은 기능 및 결과
@@ -92,5 +101,5 @@ REPLY
 ![image](https://user-images.githubusercontent.com/75213468/120108404-f8057480-c19f-11eb-9136-619d974b2f5f.png)
   </details>
  
-
+  다중 파일 업다운로드 
 
