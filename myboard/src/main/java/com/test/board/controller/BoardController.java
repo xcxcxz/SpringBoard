@@ -50,7 +50,6 @@ public class BoardController {
 			
 			if(!(upload.isEmpty() || upload == null || upload.getSize() == 0)) {
 				String orgName = upload.getOriginalFilename();
-				System.out.println(orgName);
 				String savName;
 				
 				Date date = new Date();
