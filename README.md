@@ -108,8 +108,7 @@ FILE
     
   >- js를 이용한 이미지 슬라이더(자동 및 버튼) 구현
     
-  ![image](https://user-images.githubusercontent.com/75213468/121662344-2fe5b380-cae0-11eb-97a6-562b4b7f3e06.png)  
-  ![image](https://user-images.githubusercontent.com/75213468/121666622-6cb3a980-cae4-11eb-998d-1a4c6ff3abb4.png)  
+  ![image](https://user-images.githubusercontent.com/75213468/121662344-2fe5b380-cae0-11eb-97a6-562b4b7f3e06.png) ![image](https://user-images.githubusercontent.com/75213468/121666622-6cb3a980-cae4-11eb-998d-1a4c6ff3abb4.png)  
   </details>
 
 
