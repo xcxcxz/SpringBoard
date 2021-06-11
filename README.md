@@ -102,5 +102,14 @@ FILE
   </details>
  
   다중 파일 업다운로드 
-  이미지 슬라이더 삽입 
+   
+  <details>
+  <summary>이미지 슬라이더 삽입(펼치기)</summary>  
+    
+  >- js를 이용한 이미지 슬라이더(자동 및 버튼) 구현
+    
+  ![image](https://user-images.githubusercontent.com/75213468/121662344-2fe5b380-cae0-11eb-97a6-562b4b7f3e06.png)  
+  ![image](https://user-images.githubusercontent.com/75213468/121662366-37a55800-cae0-11eb-92cb-b0bd04eb387d.png)
+  </details>
+
 
