@@ -1,6 +1,14 @@
 package com.test.board.vo;
 
-public class MemberVO {
+import java.io.Serializable;
+import java.util.Collection;
+
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+public class MemberVO implements UserDetails, Serializable{
+	
+	private static final long serialVersionUID = 1L;
 	
 	private String id;
 	private String pw;
@@ -11,6 +19,7 @@ public class MemberVO {
 	private String regdate;
 	private String authkey;
 	private String authstatus;
+	private Collection<GrantedAuthority> authorities;
 	
 	
 	public MemberVO() {}
@@ -126,6 +135,56 @@ public class MemberVO {
 		return "MemberVO [id=" + id + ", pw=" + pw + ", name=" + name + ", phone=" + phone + ", email=" + email
 				+ ", birthdate=" + birthdate + ", regdate=" + regdate + ", authkey=" + authkey + ", authstatus="
 				+ authstatus + "]";
+	}
+
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		// TODO Auto-generated method stub
+		return authorities;
+	}
+
+
+	@Override
+	public String getPassword() {
+		return pw;
+	}
+
+
+	@Override
+	public String getUsername() {
+		return id;
+	}
+
+
+	@Override
+	public boolean isAccountNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+
+	@Override
+	public boolean isAccountNonLocked() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
+
+	@Override
+	public boolean isEnabled() {
+		
+		int i = Integer.parseInt(authstatus);
+		boolean auth = (i !=0);
+		
+		return auth;
 	}
 
 	

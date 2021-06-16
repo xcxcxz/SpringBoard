@@ -63,5 +63,11 @@
       select count(*) from "MEMBER"
         where ID = #{id}
    </select>
+   
+   <select id="selectOneId" resultType="MemberVO" parameterType="MemberVO">
+      select * from "MEMBER"
+        where ID = #{id}
+   </select>
+   
 	
 </mapper>

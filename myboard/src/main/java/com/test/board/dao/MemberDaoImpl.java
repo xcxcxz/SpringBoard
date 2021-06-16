@@ -11,47 +11,47 @@ import com.test.board.vo.MemberVO;
 
 @Repository
 public class MemberDaoImpl implements MemberDao {
-	
+
 	@Autowired
 	SqlSession sqlSession;
-	
+
 	public int insertMember(MemberVO member) {
 		int result = 0;
 		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
-		
+
 		try {
 			result = mapper.insertMember(member);
-		}catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return result;
 		}
-		
+
 		return result;
 	}
-	
+
 	public MemberVO login(MemberVO member) {
-		MemberVO result=null;
-		
-		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
-		try {
-			result = mapper.login(member);
-		}catch (Exception e) {
-			e.printStackTrace();
-			return result;
-		}
-		
+		MemberVO result = null;
+
+		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
+
+			try {
+				result = mapper.login(member);
+			} catch (Exception e) {
+				e.printStackTrace();
+				return result;
+			}
 		return result;
-		
+
 	}
 
 	@Override
 	public int deleteMember(String id) {
 		int result = 0;
 		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
-		
+
 		try {
 			result = mapper.deleteMember(id);
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return result;
 		}
@@ -60,12 +60,12 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public int updateAuthKey(MemberVO member) {
-		int result=0;
-		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
-		
+		int result = 0;
+		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
+
 		try {
 			result = mapper.updateAuthKey(member);
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return result;
 		}
@@ -74,12 +74,12 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public int updateAuthStatus(MemberVO member) {
-		int result=0;
-		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
-		
+		int result = 0;
+		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
+
 		try {
 			result = mapper.updateAuthStatus(member);
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 			return result;
 		}
@@ -88,14 +88,12 @@ public class MemberDaoImpl implements MemberDao {
 
 	@Override
 	public int idCheck(MemberVO member) {
-		
-		MemberMapper mapper=sqlSession.getMapper(MemberMapper.class);
-		int result=mapper.idCheck(member);
+
+		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
+		int result = mapper.idCheck(member);
 		System.out.println(result);
-		
+
 		return result;
 	}
-	
-	
 
 }
