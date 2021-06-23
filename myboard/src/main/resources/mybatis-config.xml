@@ -10,10 +10,12 @@
 		<typeAlias type="com.test.board.vo.BoardVO" alias="BoardVO" />
 		<typeAlias type="com.test.board.vo.ReplyVO" alias="ReplyVO" />
 		<typeAlias type="com.test.board.vo.FileVO" alias="FileVO" />
+		<typeAlias type="com.test.board.vo.DonateVO" alias="DonateVO" />
 	</typeAliases>
 	<mappers>
 		<mapper resource="mappers/MemberMapper.xml" />
 		<mapper resource="mappers/BoardMapper.xml" />
+		<mapper resource="mappers/DonateMapper.xml" />
 	</mappers>
 
 

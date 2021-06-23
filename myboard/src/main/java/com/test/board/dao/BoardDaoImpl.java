@@ -9,8 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.test.board.mapper.BoardMapper;
+import com.test.board.mapper.DonateMapper;
 import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.DonateVO;
 import com.test.board.vo.FileVO;
 import com.test.board.vo.ReplyVO;
 
@@ -188,4 +190,7 @@ public class BoardDaoImpl implements BoardDao {
 		return result;
 	}
 
+	
+
+	
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.test.board.dao.BoardDao;
 import com.test.board.dao.MemberDao;
+import com.test.board.vo.DonateVO;
 import com.test.board.vo.MemberVO;
 
 @Service
@@ -47,6 +48,12 @@ public class MemberServiceImpl implements MemberService{
 	public int idCheck(MemberVO member) {
 		return memberDao.idCheck(member);
 	}
+	@Override
+	public int donate(DonateVO donate) {
+		return memberDao.donate(donate);
+	}
+	
+	
 	
 	
 }

@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import com.test.board.page.Paging;
 import com.test.board.vo.BoardVO;
+import com.test.board.vo.DonateVO;
 import com.test.board.vo.FileVO;
 import com.test.board.vo.ReplyVO;
 
@@ -34,5 +35,7 @@ public interface BoardDao {
 	public FileVO selectFile(String boardSeq);
 	
 	public FileVO selectFileBySeq(String fileSeq);
+	
+	
 		
 }

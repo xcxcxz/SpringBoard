@@ -4,6 +4,7 @@ package com.test.board.dao;
 
 import java.util.Map;
 
+import com.test.board.vo.DonateVO;
 import com.test.board.vo.MemberVO;
 
 public interface MemberDao {
@@ -19,5 +20,7 @@ public interface MemberDao {
 	public int updateAuthStatus(MemberVO member);
 	
 	public int idCheck(MemberVO member);
+	
+	public int donate(DonateVO donate);
 
 }

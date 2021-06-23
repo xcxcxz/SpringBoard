@@ -6,7 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.test.board.mapper.DonateMapper;
 import com.test.board.mapper.MemberMapper;
+import com.test.board.vo.DonateVO;
 import com.test.board.vo.MemberVO;
 
 @Repository
@@ -93,6 +95,19 @@ public class MemberDaoImpl implements MemberDao {
 		int result = mapper.idCheck(member);
 		System.out.println(result);
 
+		return result;
+	}
+	
+	@Override
+	public int donate(DonateVO donate) {
+		int result = 0;
+		DonateMapper mapper = sqlSession.getMapper(DonateMapper.class);
+		
+		try {
+			result = mapper.insertDonate(donate);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 		return result;
 	}
 

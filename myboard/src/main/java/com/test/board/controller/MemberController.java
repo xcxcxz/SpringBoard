@@ -8,14 +8,17 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.test.board.dao.MemberDao;
 import com.test.board.page.Paging;
 import com.test.board.service.BoardService;
 import com.test.board.service.MailSendService;
 import com.test.board.service.MemberService;
+import com.test.board.vo.DonateVO;
 import com.test.board.vo.MemberVO;
 
 @Controller
@@ -86,6 +89,17 @@ public class MemberController {
 			model.addAttribute("list", boardService.selectAll(searchWord, navi));
 			return "main";
 		}
+	}
+	
+	@RequestMapping(value = "/give", method = RequestMethod.POST)
+	
+	public void donate(@RequestBody HashMap<String, String> donateStr, DonateVO donate) {
+		System.out.println(donateStr.get("buyer_name"));
+		donate.setImp_uid(donateStr.get("imp_uid"));
+		donate.setBuyer_name(donateStr.get("buyer_name"));
+		donate.setPaid_amount(donateStr.get("paid_amount"));
+		memberService.donate(donate);
+		
 	}
 
 	@RequestMapping(value = "/signUpConfirm", method = RequestMethod.GET)

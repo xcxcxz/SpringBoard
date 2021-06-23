@@ -2,6 +2,7 @@ package com.test.board.service;
 
 
 
+import com.test.board.vo.DonateVO;
 import com.test.board.vo.MemberVO;
 
 public interface MemberService {
@@ -17,5 +18,7 @@ public interface MemberService {
 	public int updateAuthStatus(MemberVO member);
 	
 	public int idCheck(MemberVO member);
+	
+	public int donate(DonateVO donate);
 
 }
