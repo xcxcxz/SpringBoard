@@ -76,6 +76,8 @@
 
 ![image](https://user-images.githubusercontent.com/75213468/121160961-84422680-c887-11eb-983c-a71568b0fd0f.png) ![image](https://user-images.githubusercontent.com/75213468/121161321-d4b98400-c887-11eb-8671-831df00cc9f8.png)  
 
+  
+
 
   </details>
 
@@ -110,5 +112,17 @@ FILE
     
   ![image](https://user-images.githubusercontent.com/75213468/121662344-2fe5b380-cae0-11eb-97a6-562b4b7f3e06.png) ![image](https://user-images.githubusercontent.com/75213468/121666622-6cb3a980-cae4-11eb-998d-1a4c6ff3abb4.png)  
   </details>
+  
+<details>
+<summary>기부하기 기능(결제)(펼치기)</summary>
+  
+* 기부하기 기능  
+>- home에서 기부하기 버튼 클릭시 익명으로 기부, 로그인이후 메인페이지에서 기부하기 버튼 클릭시 회원의 id, 기부금액 등이 db에 저장. 아임포트api 사용.  
+![image](https://user-images.githubusercontent.com/75213468/123036556-3e10c980-d428-11eb-9ffa-6b7069196bdb.png)
+![image](https://user-images.githubusercontent.com/75213468/123036456-1d487400-d428-11eb-99c9-e42e9ed29246.png)  
+
+![image](https://user-images.githubusercontent.com/75213468/123036652-5c76c500-d428-11eb-9c86-992b4c367b2f.png)
+
+</details>
 
 
