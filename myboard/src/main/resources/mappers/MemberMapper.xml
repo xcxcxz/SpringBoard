@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.board.mapper.MemberMapper">
+
+	<insert id="insertMember" parameterType="MemberVO">
+
+		INSERT INTO MEMBER
+		(
+		ID
+		,PW
+		,NAME
+		,PHONE
+		,EMAIL
+		,BIRTHDATE
+		,REGDATE
+		)
+		VALUES
+		(
+		#{id}
+		,#{pw}
+		,#{name}
+		,#{phone}
+		,#{email}
+		,#{birthdate}
+		,sysdate
+		)
+	</insert>
+
+	<select id="login" parameterType="MemberVO"
+		resultType="MemberVO">
+		SELECT
+		ID
+		,PW
+		,NAME
+		,PHONE
+		,EMAIL
+		,BIRTHDATE
+		,REGDATE
+		,AUTHSTATUS
+		FROM
+		MEMBER
+		WHERE
+		ID=#{id} AND
+		PW=#{pw}
+
+	</select>
+
+	<delete id="deleteMember" parameterType="String">
+		DELETE MEMBER WHERE
+		ID=#{id}
+	</delete>
+	
+	<update id="updateAuthKey" parameterType="MemberVO">
+		UPDATE MEMBER SET AUTHKEY = #{authkey} where EMAIL = #{email}
+	</update>
+	<update id="updateAuthStatus" parameterType="MemberVO">
+		UPDATE MEMBER SET AUTHSTATUS = 1 where EMAIL = #{email}
+	</update>
+	
+	
+	<!-- 아이디 중복확인 -->
+   <select id="idCheck" resultType="int" parameterType="MemberVO">
+      select count(*) from "MEMBER"
+        where ID = #{id}
+   </select>
+   
+   <select id="selectOneId" resultType="MemberVO" parameterType="MemberVO">
+      select * from "MEMBER"
+        where ID = #{id}
+   </select>
+   
+	
+</mapper>
