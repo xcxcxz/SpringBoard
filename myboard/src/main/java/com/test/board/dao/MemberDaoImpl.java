@@ -20,7 +20,8 @@ public class MemberDaoImpl implements MemberDao {
 	public int insertMember(MemberVO member) {
 		int result = 0;
 		MemberMapper mapper = sqlSession.getMapper(MemberMapper.class);
-
+		String enpassword = FileSecurityMd.MD5(member.getPassword());
+		member.setPw(enpassword);
 		try {
 			result = mapper.insertMember(member);
 		} catch (Exception e) {
